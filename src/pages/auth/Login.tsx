@@ -93,6 +93,7 @@ const Login = () => {
           <TextField
             fullWidth
             label="User ID"
+            placeholder="Enter user ID"
             name="userId"
             value={formik.values.userId}
             onChange={formik.handleChange}
@@ -110,6 +111,7 @@ const Login = () => {
           <TextField
             fullWidth
             type="password"
+            placeholder="Enter password"
             label="Password"
             name="password"
             sx={{ mt: 3 }}
