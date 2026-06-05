@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { login } from "./api/auth.api";
+import Login from "./pages/auth/Login";
 
 function App() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function App() {
     testLogin();
   }, []);
 
-  return <div>Preproute Test Management</div>;
+  return <div><Login /></div>;
 }
 
 export default App;
