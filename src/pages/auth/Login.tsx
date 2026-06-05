@@ -30,6 +30,7 @@ const Login = () => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         minHeight: "100vh",
       }}
     >
@@ -38,9 +39,13 @@ const Login = () => {
         sx={{
           flex: 1,
           bgcolor: "#F8FAFC",
-          display: "flex",
+          display: {
+            xs: "none",
+            md: "flex",
+          },
           justifyContent: "center",
           alignItems: "center",
+          p: 4,
         }}
       >
         <img
@@ -57,7 +62,23 @@ const Login = () => {
           justifyContent: "center",
           alignItems: "center",
           bgcolor: "#fff",
-          borderLeft: "0.5px solid #60A5FA",
+          borderLeft: {
+            xs: "none",
+            md: "0.5px solid #60A5FA",
+          },
+          minHeight: {
+            xs: "100vh",
+            md: "auto",
+          },
+          px: {
+            xs: 3,
+            sm: 4,
+            md: 6,
+          },
+          py: {
+            xs: 4,
+            md: 0,
+          },
         }}
       >
         <Box
@@ -66,15 +87,22 @@ const Login = () => {
           sx={{
             width: "100%",
             maxWidth: "510px",
+            mx: "auto",
           }}
         >
-          <img src={logo} alt="logo" />
+         <img src={logo} alt="logo" />
 
           <Typography
             variant="h4"
             sx={{
               mt: 4,
               mb: 2,
+              fontSize: {
+                xs: "28px",
+                sm: "32px",
+                md: "34px",
+              },
+              fontWeight: 600,
             }}
           >
             Login
